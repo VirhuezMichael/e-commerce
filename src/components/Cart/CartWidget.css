@@ -1,0 +1,21 @@
+.cart-widget {
+  display: flex;
+  cursor: pointer;
+  color: #3a0ca3;
+}
+.cart {
+  color: #3a0ca3;
+  fill: #3a0ca3;
+}
+
+.qty-cart {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  position: absolute;
+  text-align: center;
+  line-height: 17px;
+}
