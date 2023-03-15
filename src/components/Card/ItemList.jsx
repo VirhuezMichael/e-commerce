@@ -1,17 +1,24 @@
+import { memo } from "react";
 import Item from "./Item";
-import "./ItemList.css";
+import styled from 'styled-components';
+
+const ProductsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #F8F3E6;
+  padding: 50px 0;
+`;
 
 // Este componente genera el listado de productos que recibe de products
-const ItemList = ({ products }) => {
+const ItemList = memo(({ products }) => {
   return (
-    <div className="card-container">
+    <ProductsContainer>
       {products.map((producto) => (
-        // Paso c/u de los productos como un objeto para ser renderizado en las Cards
-        //La key debe asignarse al componente principal y no como prop al children
         <Item producto={producto} key={producto.id}/>
       ))}
-    </div>
+    </ProductsContainer>
   );
-};
+});
 
 export default ItemList;

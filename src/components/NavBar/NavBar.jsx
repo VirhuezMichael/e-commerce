@@ -1,4 +1,4 @@
-import { NavbarBrand } from "react-bootstrap";
+import { useCartContext } from "../../context/CartContext";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -6,9 +6,8 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link, NavLink } from "react-router-dom";
 import CartWidget from "../Cart/CartWidget";
 
-import "./NavBar.css";
-
 const NavBar = () => {
+  const { qtyTotal } = useCartContext();
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -55,11 +54,9 @@ const NavBar = () => {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="#cart">
-              <CartWidget />
-            </Nav.Link>
+            <CartWidget />
             <Nav.Link eventKey={2} href="#qty">
-              0
+              {qtyTotal()}
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
