@@ -9,7 +9,7 @@ padding-top: 20px;
 const DescriptionContainer = styled.div`
 display: flex;
 justify-content: center;
-align-items:center:
+align-items:center;
 padding-top: 20px;
 border: 2px solid;
 border-color: black;

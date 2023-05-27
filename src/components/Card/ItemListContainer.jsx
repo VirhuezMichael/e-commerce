@@ -14,9 +14,10 @@ import {
 const GreetingContainer = styled.div`
   display: row;
   text-align: center;
+  
   background-color: #303F9F;
-  color:#FFFFFF;
-  padding-bottom: 10px;
+  color:#F7f7f7;
+  
 `
 const SpinnerContainer = styled.div`
   text-align: center;
