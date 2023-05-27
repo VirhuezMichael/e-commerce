@@ -23,7 +23,7 @@ Las siguientes dependencias son utilizadas en nuestra aplicación, junto con una
 
 ## Demo
 
-Para ver una demostración de nuestro sitio web, haga clic en el siguiente enlace: [Demo de la tienda en línea](lbimpresiones3d.netlify.app).
+Para ver una demostración de nuestro sitio web, haga clic en el siguiente enlace: [Demo de la tienda en línea](https://lbimpresiones3d.netlify.app).
 
 ## Cómo ejecutar la aplicación en localhost
 
