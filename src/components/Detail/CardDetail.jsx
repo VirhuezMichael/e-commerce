@@ -2,18 +2,22 @@ import styled from "styled-components";
 
 const DetailContainer = styled.div`
 display: flex;
-justify-content: center;
+justify-content: flex-start;
 padding-top: 20px;
+margin-left: 2rem;
+margin-right: 2rem;
 `;
 
 const DescriptionContainer = styled.div`
 display: flex;
-justify-content: center;
-align-items:center;
-padding-top: 20px;
-border: 2px solid;
-border-color: black;
-margin: 20px 130px 20px 130px;
+justify-content: flex-start;
+
+
+padding-left: 1rem;
+border: .2px solid;
+border-color: #c8c8c8;
+border-radius: 12px;
+margin: 2px 2rem 20px 2rem;
 `;
 
 const ProductDetailImageContainer = styled.div`
@@ -23,16 +27,21 @@ const ProductDetailImageContainer = styled.div`
 
 const ProductDetailImage = styled.img`
   max-width: 100%;
-  margin-right: 20px;
+  margin-right: 2px;
+  border-radius: 12px;
 `;
 
 const ProductDetailInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-color: #F7F7F7;
+  justify-content: space-evenly;
+  background-color: #fefefe;
+  border: 0.1px solid;
+  border-radius: 12px;
+  border-color: #c8c8c8;
   padding: 50px 40px 40px 50px;
+  flex: 1;
 `;
 
 const ProductDetailTitle = styled.h2`
@@ -41,7 +50,7 @@ const ProductDetailTitle = styled.h2`
 `;
 
 const ProductDetailPrice = styled.p`
-  font-size: 18px;
+  font-size: 24px;
   margin-bottom: 10px;
 `;
 
@@ -62,8 +71,8 @@ const CardDetail = ({ product }) => {
     <ProductDetailImageContainer>
       <ProductDetailImage
         className="img"
-        width={400}
-        height={400}
+        width={680}
+        height={550}
         alt="171x180"
         src={product.image}
       />
@@ -71,7 +80,7 @@ const CardDetail = ({ product }) => {
       <ProductDetailInfoContainer>
         - Detalle de Producto -
         <ProductDetailTitle>{product.name}</ProductDetailTitle>
-        <ProductDetailPrice>Precio Unitario: {product.price}</ProductDetailPrice>
+        <ProductDetailPrice>${product.price}</ProductDetailPrice>
         <ProductDetailStock>Unidades Disponibles: {product.stock}</ProductDetailStock>
       </ProductDetailInfoContainer>
       </DetailContainer>
